@@ -1,0 +1,47 @@
+.grey-layout{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(149, 165, 166, .8); /* перевести HEX в RGB */
+}
+
+.vcenter {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+}
+
+.hwindow {
+    height: 100vh; /* 100vh - 100% от высоты viewport(окна браузера) */
+}
+
+.pagination > li > a
+{
+    background-color: white;
+    color: #000000;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: #000000 !Important;
+    border: solid 1px #000000 !Important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #000000 !Important;
+    border: solid 1px #000000;
+}

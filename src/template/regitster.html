@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Регистрация</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystyle.css">
+    <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="grey-layout">
+    <div class="d-flex align-items-center" style="width: 100%; height: 100%">
+        <div class="container w-25 rounded-lg border bg-light">
+            <form>
+                <div class="form-group">
+                    <label for="emailInput">Email</label>
+                    <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">Введите ваш email</small>
+                </div>
+                <div class="form-group">
+                    <label for="loginInput">Логин</label>
+                    <input type="text" class="form-control" id="loginInput" aria-describedby="loginHelp">
+                    <small id="loginHelp" class="form-text text-muted">Введите логин для входа</small>
+                </div>
+                <div class="form-group">
+                    <label>Пароль</label>
+                    <input type="password" id="password" name="password" class="form-control" data-toggle="password">
+                    <label>Подтвердите пароль</label>
+                    <input type="password" id="confirmPassword" name="password" class="form-control"
+                           data-toggle="password">
+                    <div class="text-center">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="showPassword">
+                            <label class="custom-control-label" for="showPassword">Показать пароль</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="firstnameInput" placeholder="Ваше имя">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="secondnameInput" placeholder="Ваша фамилия">
+                </div>
+                <!--                тут поле с автокомплитом из уже известных валют, по дефолту рубли-->
+                <div class="form-group">
+                    <input type="text" class="form-control" id="currencyInput" placeholder="Валюта для записи">
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="ruleConfirm">
+                        <label class="custom-control-label" for="ruleConfirm">С правилами согласен</label>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-outline-secondary">Зарегистрироваться</button>
+                        <p>
+                            Уже есть аккаунт?
+                            <a href="/login">Войти!</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--нужно на момент верстки в реальности отвечает вью-->
+<script>
+  showPassword.addEventListener('click', () => {
+    let passwordField = document.querySelectorAll('[name="password"]')
+    passwordField.forEach((elem) => {
+      if (elem.type === 'password') {
+        elem.type = 'text'
+      } else {
+        elem.type = 'password'
+      }
+    })
+  })
+</script>
+</body>
+</html>
