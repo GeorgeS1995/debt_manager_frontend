@@ -1,0 +1,66 @@
+.grey-layout{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(149, 165, 166, .8); /* перевести HEX в RGB */
+}
+
+.vcenter {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+}
+
+.hwindow {
+    height: 100vh; /* 100vh - 100% от высоты viewport(окна браузера) */
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+
+.div-bc-align {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+table {
+    width: 60vw;
+    word-wrap: break-word;
+}
+
+.pagination > li > button
+{
+    background-color: white;
+    color: #000000;
+}
+
+.pagination > li > button:focus,
+.pagination > li > button:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination > .active > button
+{
+    color: white;
+    background-color: grey !Important;
+    border: solid 1px grey !Important;
+}
+
+.pagination > .active > button:hover
+{
+    background-color: grey !Important;
+    border: solid 1px grey;
+}
