@@ -23,7 +23,7 @@ Vue.config.productionTip = false
 Vue.use(Vuelidate)
 Vue.use(Loading)
 Vue.use(BootstrapVue)
-Vue.use(VueReCaptcha, { siteKey: '6LeFAfkUAAAAAAvPiE7NfxpdKyYAH2wxf_CeBXDF' })
+Vue.use(VueReCaptcha, { siteKey: process.env.SITE_KEY })
 Vue.directive('focus', {
   inserted: function (el) {
     el.focus()
